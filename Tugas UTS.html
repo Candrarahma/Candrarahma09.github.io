@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html Lang="in">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA MENU</title>
+    <style>
+        .awal {
+            background-color: blue;
+        }
+
+        ul li {
+            display: inline;
+            margin: 12px;
+            font-size: 30px;
+        }
+
+        #skill,
+        #SF {
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #SF {
+            display: block;
+        }
+
+        ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        img {
+            border-radius: 50%;
+            width: 144px;
+            height: 256px;
+            float: left;
+            border: 3px solid;
+        }
+
+        .konten {
+            text-align: center;
+            background-color: rgba(0,255,255,0.25);
+        }
+
+        #garis {
+            border-bottom: 4px solid rgb(50, 50, 50);
+        }
+        .tugas_kuliah {
+            text-align: left;
+        }
+        ol li a{
+            text-decoration: none;
+        }
+        ol li a:hover {
+            color:cornflowerblue;
+        }
+        body {
+            background-image: url(background.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        @media only screen and (max-width:450px) {
+            ul li {
+                margin: 8px;
+                font-size: 20px;
+            }
+
+            #skill,
+            #SF {
+                font-size: 13px;
+            }
+
+            img {
+                width: 114px;
+                height: 190px;
+            }
+
+            p,
+            strong,
+            h3 {
+                font-size: small;
+            }
+
+            #garis {
+                border-bottom: 2px solid rgb(180, 50, 180);
+            }
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="awal">
+        <ul>
+            <li><a id="about" class="aktif" href="#">Tentang Saya</a></li>
+            <li><a id="kontak" class="aktif" href="#">Kontak</a></li>
+            <li><a id="tugas_kuliah" class="aktif" href="#">Tugas Kuliah</a></li>
+        </ul>
+    </div>
+    <div class="konten">
+        <div class="about">
+            <p id="garis"><img src="FOTO.jpg" alt="foto">
+                <p id="garis">
+                <strong>Nama :</strong> Candra Rahmawati <br>
+                <strong>NIM :</strong> 41215297 <br>
+                <strong>Kelas :</strong> TI-2021-KIP-P5 <br>
+                <strong>Prodi :</strong> Teknik Informatika <br>
+            </p>
+            <p>Saya Lulusan SMK BATIK PERBAIK PURWOREJO, mengambil jurusan Teknik Komputer & Jaringan
+                <strong>(TKJ)</strong>
+                <br>Saya melanjutkan pendidikan diperguruan tinggi <strong>STMIK IKMI CIREBON</strong>
+                <br>Alasan saya mengambil prodi Teknik Informatika karna saya menyukai pemograman.
+                <br>Saya suka menonton Drakor dan saya juga suka musik Kpop.
+            </p>
+            <div class="skill">
+                <h5>Skill</h5>
+                <ul id="skill">
+                    <li id="skill">HTML</li>
+                    <li id="skill">CSS</li>
+                    <li id="skill">JavaScript</li>
+                    <li id="skill">MikroTik</li>
+                    <li id="skill">Ms. Excel</li>
+                    <li id="skill">GitHub</li>
+                </ul>
+            </div>
+            <br>
+            <div class="serte">
+                <h3>Sertifikat</h3>
+                <ul>
+                    <li id="SF">IT-essential</li>
+                </ul>
+            </div>
+        </div>
+        <div class="kontak">
+            <p>&#9993; <a href="#">candrarahma05@gmail.com</a></p>
+            <p>&#128222; <a href="#">+62 857-0037-6048</a></p>
+        </div>
+        <div class="tugas_kuliah">
+            <h3>Tugas</h3>
+            <ol>
+                <li><a href="https://candrarahma.github.io/candrarahma09.github.io/tabel_html">Tabel sederhana</a></li>
+                <li><a href="https://candrarahma.github.io/candrarahma09.github.io/tabel%20css%202">Tabel CSS</a></li>
+                <li><a href="https://candrarahma.github.io/candrarahma09.github.io/tabel_t">Formulir sederhana</a></li>
+                <li><a href="https://candrarahma.github.io/candrarahma09.github.io/tabeljquery.html">jquery fadeOut Delete</a></li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function (){
+            $('#about').click(function (){
+                $('.about').slideToggle("slow");
+            });
+        });
+        $(document).ready(function (){
+            $('#kontak').click(function (){
+                $('.kontak').slideToggle("slow");
+            });
+        });
+        $(document).ready(function (){
+            $('#tugas_kuliah').click(function (){
+                $('.tugas_kuliah').slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+
+</html>
